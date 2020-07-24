@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Calculator.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid
+            Padding="0,115,20,20"
+            ColumnSpacing="-7"
+            RowSpacing="-11"
+                BackgroundColor="#1a2228">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="96"/>
+                    <ColumnDefinition Width="95"/>
+                    <ColumnDefinition Width="95"/>
+                    <ColumnDefinition Width="96"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="resultText" 
+                TextColor="White"
+                Text="0"
+                HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"
+                       LineBreakMode="NoWrap"
+                       FontSize="70"
+                Grid.ColumnSpan="4"
+                />
+                <Button Text="C"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                   BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        BorderWidth="1"
+                        Clicked="OnClear"
+                        />
+                <Button Text="+/-"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Changesign"
+                        BorderWidth="1"/>
+                <Button Text="%"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Persentage"
+                        BorderWidth="1"/>
+                <Button Text="DEL"
+                    Grid.Row="1"
+                    Grid.Column="3"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="OnDelete"
+                        BorderWidth="1"/>
+                <Button Text="7"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="8"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="9"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="÷"
+                    Grid.Row="2"
+                    Grid.Column="3"
+                        BackgroundColor="#696969"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="OnSelectOperator"
+                        BorderWidth="1"/>
+                <Button Text="4"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="5"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="6"
+                    Grid.Row="3"
+                    Grid.Column="2"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="×"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                        BackgroundColor="#696969"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="OnSelectOperator"
+                        BorderWidth="1"/>
+                <Button Text="1"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="2"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="3"
+                    Grid.Row="4"
+                    Grid.Column="2"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="-"
+                    Grid.Row="4"
+                    Grid.Column="3"
+                        BackgroundColor="#696969"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="OnSelectOperator"
+                        BorderWidth="1"/>
+                <Button Text="0"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Numberclick"
+                        BorderWidth="1"/>
+                <Button Text="."
+                    Grid.Row="5"
+                    Grid.Column="1"
+                        BackgroundColor="black"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="Decimalclick"
+                        BorderWidth="1"/>
+                <Button Text="="
+                    Grid.Row="5"
+                    Grid.Column="2"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="OnCalculate"
+                        BorderWidth="1"/>
+                <!--Clicked="OnCalculate"-->
+                <Button Text="+"
+                    Grid.Row="5"
+                    Grid.Column="3"
+                        BackgroundColor="#696969"
+                        TextColor="White"
+                        FontSize="Large"
+                        Clicked="OnSelectOperator"
+                        BorderWidth="1"/>
+
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+
+
+</ContentPage>
